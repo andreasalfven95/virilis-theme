@@ -10,6 +10,7 @@
 </head>
 
 <body <?php body_class( 'bg-white text-gray-900 antialiased' ); ?>>
+<?php wp_body_open(); ?>
 
 <?php do_action( 'virilis_theme_site_before' ); ?>
 
