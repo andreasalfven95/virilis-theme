@@ -44,6 +44,10 @@
   }
 }
 
+.relative {
+  position: relative
+}
+
 .m-8 {
   margin: 2rem
 }
@@ -63,26 +67,8 @@
   margin-right: auto
 }
 
-.my-12 {
-  margin-top: 3rem;
-  margin-bottom: 3rem
-}
-
-.my-4 {
-  margin-top: 1rem;
-  margin-bottom: 1rem
-}
-
 .mb-8 {
   margin-bottom: 2rem
-}
-
-.mt-4 {
-  margin-top: 1rem
-}
-
-.mb-10 {
-  margin-bottom: 2.5rem
 }
 
 .mb-4 {
@@ -95,6 +81,18 @@
 
 .mb-12 {
   margin-bottom: 3rem
+}
+
+.ml-2 {
+  margin-left: 0.5rem
+}
+
+.mt-4 {
+  margin-top: 1rem
+}
+
+.block {
+  display: block
 }
 
 .inline-block {
@@ -117,6 +115,10 @@
   height: 1.5rem
 }
 
+.max-h-20 {
+  max-height: 5rem
+}
+
 .min-h-screen {
   min-height: 100vh
 }
@@ -137,12 +139,8 @@
   max-width: 24rem
 }
 
-.max-w-screen-lg {
-  max-width: 960px
-}
-
-.flex-none {
-  flex: none
+.max-w-xs {
+  max-width: 20rem
 }
 
 .flex-grow {
@@ -181,8 +179,9 @@
   border-radius: 0.25rem
 }
 
-.rounded-xl {
-  border-radius: 0.75rem
+.rounded-r-md {
+  border-top-right-radius: 0.375rem;
+  border-bottom-right-radius: 0.375rem
 }
 
 .border {
@@ -196,10 +195,6 @@
 .border-primary {
   --tw-border-opacity: 1;
   border-color: rgb(14 165 233 / var(--tw-border-opacity))
-}
-
-.border-transparent {
-  border-color: transparent
 }
 
 .bg-primary {
@@ -225,11 +220,6 @@
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity))
-}
-
-.bg-gray-900 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(17 24 39 / var(--tw-bg-opacity))
 }
 
 .p-4 {
@@ -261,20 +251,6 @@
   padding-bottom: 1.5rem
 }
 
-.py-3 {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem
-}
-
-.px-6 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem
-}
-
-.pb-12 {
-  padding-bottom: 3rem
-}
-
 .text-center {
   text-align: center
 }
@@ -289,19 +265,14 @@
   line-height: 2rem
 }
 
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem
-}
-
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem
 }
 
 .font-light {
@@ -316,28 +287,12 @@
   font-weight: 800
 }
 
-.font-medium {
-  font-weight: 500
-}
-
-.font-semibold {
-  font-weight: 600
-}
-
 .uppercase {
   text-transform: uppercase
 }
 
-.leading-6 {
-  line-height: 1.5rem
-}
-
 .leading-tight {
   line-height: 1.25
-}
-
-.tracking-tight {
-  letter-spacing: -0.025em
 }
 
 .text-gray-800 {
@@ -360,21 +315,6 @@
   color: rgb(17 24 39 / var(--tw-text-opacity))
 }
 
-.text-gray-600 {
-  --tw-text-opacity: 1;
-  color: rgb(75 85 99 / var(--tw-text-opacity))
-}
-
-.text-secondary {
-  --tw-text-opacity: 1;
-  color: rgb(20 184 166 / var(--tw-text-opacity))
-}
-
-.text-primary {
-  --tw-text-opacity: 1;
-  color: rgb(14 165 233 / var(--tw-text-opacity))
-}
-
 .text-gray-700 {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity))
@@ -385,21 +325,22 @@
   color: rgb(59 130 246 / var(--tw-text-opacity))
 }
 
+.text-gray-600 {
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity))
+}
+
 .antialiased {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale
 }
 
-.transition-colors {
-  transition-property: color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
+.transition {
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms
-}
-
-.duration-200 {
-  transition-duration: 200ms
 }
 
 .alignfull {
@@ -481,42 +422,12 @@ body {
   max-width: 1280px
 }
 
-.wp-block[data-align=wide] {
+.wp-block[data-align='wide'] {
   max-width: 1280px
 }
 
-.wp-block[data-align=full] {
+.wp-block[data-align='full'] {
   max-width: 100%
-}
-
-.focus\:outline-none:focus {
-  outline: 2px solid transparent;
-  outline-offset: 2px
-}
-
-.focus\:ring-2:focus {
-  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)
-}
-
-.focus\:ring-gray-900:focus {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(17 24 39 / var(--tw-ring-opacity))
-}
-
-.focus\:ring-offset-2:focus {
-  --tw-ring-offset-width: 2px
-}
-
-.focus\:ring-offset-white:focus {
-  --tw-ring-offset-color: #fff
-}
-
-@media (min-width: 600px) {
-  .sm\:w-auto {
-    width: auto
-  }
 }
 
 @media (min-width: 782px) {
@@ -525,12 +436,59 @@ body {
     margin-bottom: 1.5rem
   }
 
+  .md\:-mx-4 {
+    margin-left: -1rem;
+    margin-right: -1rem
+  }
+
+  .md\:mx-4 {
+    margin-left: 1rem;
+    margin-right: 1rem
+  }
+
+  .md\:ml-0 {
+    margin-left: 0px
+  }
+
+  .md\:mt-0 {
+    margin-top: 0px
+  }
+
+  .md\:block {
+    display: block
+  }
+
   .md\:flex {
     display: flex
   }
 
+  .md\:hidden {
+    display: none
+  }
+
   .md\:w-1\/2 {
     width: 50%
+  }
+
+  .md\:items-center {
+    align-items: center
+  }
+
+  .md\:justify-between {
+    justify-content: space-between
+  }
+
+  .md\:bg-transparent {
+    background-color: transparent
+  }
+
+  .md\:bg-white {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity))
+  }
+
+  .md\:p-0 {
+    padding: 0px
   }
 
   .md\:text-3xl {
@@ -540,53 +498,6 @@ body {
 }
 
 @media (min-width: 960px) {
-  .lg\:-mx-4 {
-    margin-left: -1rem;
-    margin-right: -1rem
-  }
-
-  .lg\:mx-4 {
-    margin-left: 1rem;
-    margin-right: 1rem
-  }
-
-  .lg\:mt-0 {
-    margin-top: 0px
-  }
-
-  .lg\:block {
-    display: block
-  }
-
-  .lg\:flex {
-    display: flex
-  }
-
-  .lg\:hidden {
-    display: none
-  }
-
-  .lg\:items-center {
-    align-items: center
-  }
-
-  .lg\:justify-between {
-    justify-content: space-between
-  }
-
-  .lg\:bg-transparent {
-    background-color: transparent
-  }
-
-  .lg\:p-0 {
-    padding: 0px
-  }
-
-  .lg\:text-7xl {
-    font-size: 4.5rem;
-    line-height: 1
-  }
-
   .lg\:text-5xl {
     font-size: 3rem;
     line-height: 1

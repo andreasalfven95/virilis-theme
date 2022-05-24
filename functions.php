@@ -8,20 +8,12 @@ function virilis_theme_setup() {
 
 	register_nav_menus(
 		array(
-			'primary' => __( 'Primary Menu', 'tailpress' ),
+			'virilis-header-menu' => esc_html__( 'Header Menu', 'virilis_theme' ),
+			'virilis-footer-menu' => esc_html__( 'Footer Menu', 'virilis_theme' ),
 		)
 	);
 
-	add_theme_support(
-		'html5',
-		array(
-			'search-form',
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption',
-		)
-	);
+	add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ) );
 
     add_theme_support( 'custom-logo' );
 	add_theme_support( 'post-thumbnails' );
@@ -31,6 +23,24 @@ function virilis_theme_setup() {
 
 	add_theme_support( 'editor-styles' );
 	add_editor_style( 'css/editor-style.css' );
+
+	add_theme_support( "custom-background", [
+		"default-color" => "#fff",
+		'default-image' => '',
+	] );
+	
+	add_theme_support( 'automatic-feed-links' );
+
+	add_theme_support( 'customize-selective-refresh-widgets' );
+		
+	add_theme_support( 'wp-block-styles' );
+
+	/* global $content_width;
+	if(!isset($content_width)){
+		$content_width = 1240;
+	} */
+
+	/* add_theme_support( 'editor-styles' ); */
 }
 
 add_action( 'after_setup_theme', 'virilis_theme_setup' );
@@ -41,8 +51,8 @@ add_action( 'after_setup_theme', 'virilis_theme_setup' );
 function virilis_theme_enqueue_scripts() {
 	$theme = wp_get_theme();
 
-	wp_enqueue_style( 'tailpress', virilis_theme_asset( 'css/app.css' ), array(), $theme->get( 'Version' ) );
-	wp_enqueue_script( 'tailpress', virilis_theme_asset( 'js/app.js' ), array(), $theme->get( 'Version' ) );
+	wp_enqueue_style( 'virilis_theme', virilis_theme_asset( 'css/app.css' ), array(), $theme->get( 'Version' ) );
+	wp_enqueue_script( 'virilis_theme', virilis_theme_asset( 'js/app.js' ), array(), $theme->get( 'Version' ) );
 }
 
 add_action( 'wp_enqueue_scripts', 'virilis_theme_enqueue_scripts' );

@@ -18,18 +18,18 @@
 			/* translators: %s: Name of current post */
 			the_content(
 				sprintf(
-					__( 'Continue reading %s', 'tailpress' ),
+					__( 'Continue reading %s', 'virilis_theme' ),
 					the_title( '<span class="screen-reader-text">"', '"</span>', false )
 				)
 			);
 
 			wp_link_pages(
 				array(
-					'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'tailpress' ) . '</span>',
+					'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'virilis_theme' ) . '</span>',
 					'after'       => '</div>',
 					'link_before' => '<span>',
 					'link_after'  => '</span>',
-					'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'tailpress' ) . ' </span>%',
+					'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'virilis_theme' ) . ' </span>%',
 					'separator'   => '<span class="screen-reader-text">, </span>',
 				)
 			);
