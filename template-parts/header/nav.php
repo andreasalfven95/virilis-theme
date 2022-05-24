@@ -2,7 +2,7 @@
 /**
  * Header navigation template.
  * 
- * @package Virlis theme
+ * @package virilis_theme
  */
 ?>
 

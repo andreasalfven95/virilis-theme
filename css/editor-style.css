@@ -222,6 +222,10 @@
   background-color: rgb(243 244 246 / var(--tw-bg-opacity))
 }
 
+.bg-none {
+  background-image: none
+}
+
 .p-4 {
   padding: 1rem
 }
@@ -478,6 +482,10 @@ body {
     justify-content: space-between
   }
 
+  .md\:border {
+    border-width: 1px
+  }
+
   .md\:bg-transparent {
     background-color: transparent
   }
@@ -489,6 +497,10 @@ body {
 
   .md\:p-0 {
     padding: 0px
+  }
+
+  .md\:p-4 {
+    padding: 1rem
   }
 
   .md\:text-3xl {

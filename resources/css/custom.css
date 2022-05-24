@@ -46,16 +46,8 @@ article > *:not(.entry-content),
 
 /* HEADER */
 
-.sub-menu {
-  @apply block relative md:hidden md:bg-white p-4 border rounded-r-md;
-}
-
-.sub-menu a {
-  @apply bg-none;
-}
-
 .menu-item a {
-  @apply link-underline;
+  @apply link-underline font-bold;
 }
 
 .menu-item-has-children:hover ul {
@@ -63,17 +55,28 @@ article > *:not(.entry-content),
 }
 
 .menu-item-has-children li {
-  @apply ml-2 md:ml-0 relative;
+  @apply ml-2 md:ml-0;
 }
 
 .menu-item-has-children:after {
-  content: '˅';
-  font-size: 0.8em;
-  font-weight: 900;
-  margin-left: 7px;
+  /* content: '˅'; */
+  /* content: url('https://img.icons8.com/ios-filled/10/000000/expand-arrow--v1.png'); */
+  /* font-size: 0.8em; */
+  /* font-weight: bold; */
+  content: url('https://img.icons8.com/external-those-icons-fill-those-icons/5/000000/external-down-arrows-those-icons-fill-those-icons-6.png');
+  margin-left: 2px;
   position: relative;
+  top: -2px;
 }
 
 .menu-item-has-children:after {
   @apply hidden md:inline-block;
+}
+
+.sub-menu {
+  @apply block relative md:hidden md:bg-white md:p-4 md:border rounded-md;
+}
+
+.sub-menu a {
+  @apply bg-none font-normal;
 }
