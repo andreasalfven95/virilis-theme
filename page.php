@@ -8,7 +8,7 @@
  get_header();
 ?>
 
-<div class="">
+<div class="container mx-auto my-8">
     Normal page
 </div>
 
