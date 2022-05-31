@@ -17,6 +17,7 @@ function virilis_theme_setup() {
 
     add_theme_support( 'custom-logo' );
 	add_theme_support( 'post-thumbnails' );
+	/* add_image_size( "featured-thumbnail" ); */
 
 	add_theme_support( 'align-wide' );
 	add_theme_support( 'wp-block-styles' );
@@ -117,3 +118,25 @@ function virilis_theme_nav_menu_add_submenu_class( $classes, $args, $depth ) {
 }
 
 add_filter( 'nav_menu_submenu_css_class', 'virilis_theme_nav_menu_add_submenu_class', 10, 3 );
+
+/* CUSTOM FUNCTIONS */
+function get_the_post_custom_thumbnail($post_id, $additional_attributes = []){
+	$custom_thumbnail = "";
+	if(null === $post_id){
+		$post_id = get_the_ID(  );
+	}
+	if(has_post_thumbnail( $post_id )){
+		$default_attributes = [
+			"loading" => "lazy"
+		];
+
+		$attributes = array_merge($additional_attributes, $default_attributes);
+
+		$custom_thumbnail = wp_get_attachment_image( get_post_thumbnail_id( $post_id ), false, $additional_attributes );
+	}
+	return $custom_thumbnail;
+}
+
+function the_post_custom_thumbnail($post_id, $additional_attributes = []){
+	echo get_the_post_thumbnail($post_id, $additional_attributes);
+}

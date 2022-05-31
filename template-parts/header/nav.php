@@ -6,7 +6,7 @@
  */
 ?>
 
-<nav class="mx-auto container">
+<nav class="mx-auto px-4">
     <div class="md:flex md:justify-between md:items-center border-b py-6">
         <div class="flex justify-between items-center">
             <div class="max-h-20 max-w-xs">

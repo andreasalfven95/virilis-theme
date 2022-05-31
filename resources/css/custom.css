@@ -44,6 +44,11 @@ article > *:not(.entry-content),
   }
 }
 
+/* IMAGES */
+img {
+  @apply object-cover;
+}
+
 /* HEADER */
 
 .menu-item a {
@@ -79,4 +84,8 @@ article > *:not(.entry-content),
 
 .sub-menu a {
   @apply bg-none font-normal;
+}
+
+.current_page_item {
+  @apply text-primary;
 }

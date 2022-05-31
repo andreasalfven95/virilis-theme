@@ -4,12 +4,12 @@
 
 @import 'custom.css';
 
-/* LINK UNDERLINE */
+/* LINK UNDERLINE - PRIMARY COLOR */
 @layer components {
   .link-underline {
     border-bottom-width: 0;
     background-image: linear-gradient(transparent, transparent),
-      linear-gradient(#000, #000);
+      linear-gradient(#668aa5, #668aa5);
     background-size: 0 2px;
     background-position: 0 100%;
     background-repeat: no-repeat;
