@@ -67,6 +67,21 @@
   margin-right: auto
 }
 
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem
+}
+
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem
+}
+
+.mx-1 {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem
+}
+
 .mb-8 {
   margin-bottom: 2rem
 }
@@ -111,12 +126,16 @@
   height: 0.25rem
 }
 
+.h-full {
+  height: 100%
+}
+
 .h-6 {
   height: 1.5rem
 }
 
-.h-full {
-  height: 100%
+.max-h-96 {
+  max-height: 24rem
 }
 
 .max-h-80 {
@@ -195,6 +214,14 @@
   border-radius: 0.25rem
 }
 
+.rounded-3xl {
+  border-radius: 1.5rem
+}
+
+.border {
+  border-width: 1px
+}
+
 .border-b {
   border-bottom-width: 1px
 }
@@ -224,6 +251,11 @@
   background-color: rgb(255 255 255 / var(--tw-bg-opacity))
 }
 
+.bg-secondary {
+  --tw-bg-opacity: 1;
+  background-color: rgb(102 165 139 / var(--tw-bg-opacity))
+}
+
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity))
@@ -235,6 +267,10 @@
 
 .p-4 {
   padding: 1rem
+}
+
+.p-2 {
+  padding: 0.5rem
 }
 
 .px-4 {
@@ -255,6 +291,11 @@
 .py-12 {
   padding-top: 3rem;
   padding-bottom: 3rem
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem
 }
 
 .py-6 {
@@ -279,6 +320,10 @@
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem
+}
+
+.text-small {
+  font-size: 0.875rem
 }
 
 .text-lg {
@@ -331,9 +376,9 @@
   color: rgb(55 65 81 / var(--tw-text-opacity))
 }
 
-.text-blue-500 {
+.text-primary {
   --tw-text-opacity: 1;
-  color: rgb(59 130 246 / var(--tw-text-opacity))
+  color: rgb(102 138 165 / var(--tw-text-opacity))
 }
 
 .text-gray-600 {
@@ -352,6 +397,16 @@
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms
+}
+
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms
+}
+
+.duration-300 {
+  transition-duration: 300ms
 }
 
 .alignfull {

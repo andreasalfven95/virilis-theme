@@ -557,6 +557,21 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: auto;
 }
 
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.mx-1 {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+
 .mb-8 {
   margin-bottom: 2rem;
 }
@@ -601,12 +616,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 0.25rem;
 }
 
+.h-full {
+  height: 100%;
+}
+
 .h-6 {
   height: 1.5rem;
 }
 
-.h-full {
-  height: 100%;
+.max-h-96 {
+  max-height: 24rem;
 }
 
 .max-h-80 {
@@ -685,6 +704,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-radius: 0.25rem;
 }
 
+.rounded-3xl {
+  border-radius: 1.5rem;
+}
+
+.border {
+  border-width: 1px;
+}
+
 .border-b {
   border-bottom-width: 1px;
 }
@@ -714,6 +741,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-secondary {
+  --tw-bg-opacity: 1;
+  background-color: rgb(102 165 139 / var(--tw-bg-opacity));
+}
+
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
@@ -725,6 +757,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .p-4 {
   padding: 1rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
 }
 
 .px-4 {
@@ -745,6 +781,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .py-12 {
   padding-top: 3rem;
   padding-bottom: 3rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 .py-6 {
@@ -769,6 +810,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.text-small {
+  font-size: 0.875rem;
 }
 
 .text-lg {
@@ -821,9 +866,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(55 65 81 / var(--tw-text-opacity));
 }
 
-.text-blue-500 {
+.text-primary {
   --tw-text-opacity: 1;
-  color: rgb(59 130 246 / var(--tw-text-opacity));
+  color: rgb(102 138 165 / var(--tw-text-opacity));
 }
 
 .text-gray-600 {
@@ -842,6 +887,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
 }
 
 .alignfull {
@@ -937,7 +992,7 @@ article > *:not(.entry-content), .entry-content > * {
 
 .entry-content p a, .entry-content ul a, .entry-content ol a, .block-editor-block-list__layout p a, .block-editor-block-list__layout ul a, .block-editor-block-list__layout ol a {
       --tw-text-opacity: 1;
-      color: rgb(59 130 246 / var(--tw-text-opacity));
+      color: rgb(102 138 165 / var(--tw-text-opacity));
     }
 
 .entry-content p a, .entry-content ul a, .entry-content ol a, .block-editor-block-list__layout p a, .block-editor-block-list__layout ul a, .block-editor-block-list__layout ol a {
@@ -969,6 +1024,59 @@ article > *:not(.entry-content), .entry-content > * {
 .entry-content ol li, .block-editor-block-list__layout ol li {
       list-style-type: decimal;
     }
+
+.entry-content p {
+  margin-bottom: 1.5rem;
+}
+
+/* BUTTON */
+
+button {
+  transition-property: all;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button a {
+  font-size: 0.875rem;
+  line-height: 2rem;
+}
+
+.button-primary {
+  border-radius: 1.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(102 138 165 / var(--tw-bg-opacity));
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.button-primary:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(102 165 139 / var(--tw-bg-opacity));
+}
+
+.button-secondary {
+  border-radius: 1.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(102 165 139 / var(--tw-bg-opacity));
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.button-secondary:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(102 165 139 / var(--tw-bg-opacity));
+}
 
 /* IMAGES */
 
@@ -1069,6 +1177,16 @@ img {
 .current_page_item {
   --tw-text-opacity: 1;
   color: rgb(102 138 165 / var(--tw-text-opacity));
+}
+
+/* PAGINATION */
+
+.page-numbers.current > span {
+  --tw-bg-opacity: 1;
+  background-color: rgb(102 138 165 / var(--tw-bg-opacity));
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 /* LINK UNDERLINE - PRIMARY COLOR */
